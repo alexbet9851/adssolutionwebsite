@@ -240,7 +240,7 @@ export default function HeroSection({ content }: { content: SiteContent }) {
 
         {/* Hero content */}
         <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center px-3 pb-6 pt-0 text-center sm:px-2 sm:pb-5 sm:pt-1">
-          <div className="flex w-full max-w-[560px] flex-col items-center">
+          <div className="flex w-full max-w-[920px] flex-col items-center">
             <MountReveal variant="blur" delay={0.2}>
               <p className="max-w-[340px] px-1 pb-3 font-rubik text-lg font-light leading-[1.15] text-white sm:max-w-[560px] sm:pb-2 sm:pt-1 sm:text-xl sm:leading-[1.012]">
                 {content.hero.subtitleNormal}
@@ -255,7 +255,7 @@ export default function HeroSection({ content }: { content: SiteContent }) {
               lines={[...content.hero.headlineLines]}
               className={
                 content.hero.headlineClassName ??
-                "my-5 flex w-full max-w-[calc(100vw-2.5rem)] flex-col items-center font-stratos text-[32px] font-medium uppercase leading-[1.012] text-white [&>span]:whitespace-nowrap sm:my-6 sm:max-w-[840px] sm:text-[35px] md:my-8 md:text-[64px]"
+                "my-5 w-full text-center font-stratos text-[32px] font-medium uppercase leading-[1.012] text-white sm:my-6 sm:text-[35px] md:my-8 md:text-[64px]"
               }
             />
 
