@@ -88,7 +88,7 @@ export default function ResultsSection({ content }: { content: SiteContent }) {
                       className={`flex h-full min-h-[190px] flex-col rounded-3xl p-7 sm:min-h-[200px] lg:p-8 ${
                         isAmber
                           ? "bg-[#F5C518] text-neutral-950"
-                          : "bg-[#0f0f0f] text-white ring-1 ring-white/[0.06]"
+                          : "bg-[#171717] text-white ring-1 ring-white/[0.08]"
                       }`}
                     >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-neutral-950">

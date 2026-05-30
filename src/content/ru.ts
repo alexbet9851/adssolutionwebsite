@@ -97,11 +97,12 @@ export const ruContent: SiteContent = {
     subtitleNormal: "Профессиональное управление рекламой с фокусом на ",
     subtitleBold: "окупаемость и рост прибыли.",
     headlineLines: [
-      "МАСШТАБИРУЮ БИЗНЕС ЧЕРЕЗ",
-      "GOOGLE ADS: ОТ СТРАТЕГИИ ДО ПРИБЫЛИ",
+      "МАСШТАБИРУЮ БИЗНЕС",
+      "ЧЕРЕЗ GOOGLE ADS:",
+      "ОТ СТРАТЕГИИ ДО ПРИБЫЛИ",
     ],
     headlineClassName:
-      "my-5 w-full text-center font-stratos text-[32px] font-medium uppercase leading-[1.012] text-white sm:my-6 sm:text-[35px] md:my-8 md:text-[56px]",
+      "my-5 w-full text-center font-stratos text-[28px] font-medium uppercase leading-[1.05] text-white sm:my-6 sm:text-[32px] sm:leading-[1.012] md:my-8 md:text-[56px]",
     cta: "Бесплатный экспресс-аудит",
     supportLine1:
       "Найду ошибки, которые сливают ваш бюджет прямо сейчас,",
