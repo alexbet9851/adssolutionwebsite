@@ -63,13 +63,16 @@ export default function ResultsSection({ content }: { content: SiteContent }) {
         </h2>
 
         <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.62fr)] lg:gap-8">
-          <Reveal variant="blurUp" className="relative min-h-[380px] overflow-hidden rounded-3xl lg:min-h-0 lg:h-full">
+          <Reveal
+            variant="blurUp"
+            className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl lg:aspect-auto lg:min-h-0 lg:h-full"
+          >
             <Image
               src="/assets/2 block/фото.jpg"
               alt={results.photoAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 38vw"
-              className="object-cover object-top"
+              className="object-cover object-[50%_44%] lg:scale-100 lg:object-top"
               priority
             />
           </Reveal>

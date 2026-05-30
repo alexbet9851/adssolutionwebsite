@@ -104,18 +104,18 @@ function CaseSlide({
             {caseItem.niche}
           </p>
         )}
-        <div className="rounded-2xl border border-white/[0.06] bg-black/20 p-5 md:p-6">
+        <div className="rounded-2xl border border-white/[0.06] bg-black/20 p-4 md:p-6">
           {caseItem.results.map((result, index) => (
             <div
               key={result.highlight}
-              className={`flex items-start justify-between gap-4 sm:items-center sm:gap-8 ${
-                index > 0 ? 'mt-5 border-t border-white/[0.06] pt-5' : ''
+              className={`flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-6 ${
+                index > 0 ? 'mt-4 border-t border-white/[0.06] pt-4 sm:mt-5 sm:pt-5' : ''
               }`}
             >
-              <p className="max-w-[55%] font-rubik text-base leading-[1.15] text-white sm:max-w-none md:text-lg">
+              <p className="font-rubik text-[15px] leading-[1.2] text-white sm:max-w-[52%] sm:pr-2 md:text-lg">
                 {result.text}
               </p>
-              <p className="shrink-0 text-right font-stratos text-[22px] font-medium leading-none text-[#FFCC00] sm:text-[26px] md:text-[30px]">
+              <p className="font-stratos text-[20px] font-medium leading-[1.1] text-[#FFCC00] sm:max-w-[48%] sm:shrink-0 sm:text-right sm:text-[24px] md:text-[30px]">
                 {result.highlight}
               </p>
             </div>

@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { springHero } from "@/lib/motion";
+import { pushFormSubmissionEvent } from "@/lib/pushFormSubmissionEvent";
 import type { SiteContent } from "@/types/site-content";
 
 type FormState = {
@@ -71,6 +72,7 @@ export function AuditLeadModal({ open, onClose, content }: AuditLeadModalProps) 
 
     setSubmitted(true);
     setForm(INITIAL_FORM);
+    pushFormSubmissionEvent("express_audit_form");
   };
 
   return (

@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { Reveal } from "@/components/motion/Reveal";
 import { RevealWords } from "@/components/motion/RevealWords";
+import { pushFormSubmissionEvent } from "@/lib/pushFormSubmissionEvent";
 import type { SiteContent } from "@/types/site-content";
 
 type FormState = {
@@ -40,6 +41,7 @@ export default function ContactFormSection({ content }: { content: SiteContent }
 
     setSubmitted(true);
     setForm(INITIAL_FORM);
+    pushFormSubmissionEvent("contact_strategy_form");
   };
 
   return (

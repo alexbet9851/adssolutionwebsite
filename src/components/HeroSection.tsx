@@ -239,10 +239,10 @@ export default function HeroSection({ content }: { content: SiteContent }) {
         </header>
 
         {/* Hero content */}
-        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center px-2 pb-5 pt-1 text-center">
-          <div className="flex flex-col items-center">
+        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center px-3 pb-6 pt-0 text-center sm:px-2 sm:pb-5 sm:pt-1">
+          <div className="flex w-full max-w-[560px] flex-col items-center">
             <MountReveal variant="blur" delay={0.2}>
-              <p className="max-w-[560px] px-2 pb-2 pt-1 font-rubik text-xl font-light leading-[1.012] text-white">
+              <p className="max-w-[340px] px-1 pb-3 font-rubik text-lg font-light leading-[1.15] text-white sm:max-w-[560px] sm:pb-2 sm:pt-1 sm:text-xl sm:leading-[1.012]">
                 {content.hero.subtitleNormal}
                 <span className="font-semibold">{content.hero.subtitleBold}</span>
               </p>
@@ -255,29 +255,29 @@ export default function HeroSection({ content }: { content: SiteContent }) {
               lines={[...content.hero.headlineLines]}
               className={
                 content.hero.headlineClassName ??
-                "my-6 max-w-[840px] font-stratos text-[35px] font-medium uppercase leading-[1.012] text-white sm:my-7 md:my-8 md:text-[64px]"
+                "my-5 flex w-full max-w-[calc(100vw-2.5rem)] flex-col items-center font-stratos text-[32px] font-medium uppercase leading-[1.012] text-white [&>span]:whitespace-nowrap sm:my-6 sm:max-w-[840px] sm:text-[35px] md:my-8 md:text-[64px]"
               }
             />
 
             <HoverScale
               type="button"
               onClick={() => setAuditModalOpen(true)}
-              className="group inline-flex items-center gap-3 rounded-full bg-[#F5C518] py-3 pl-7 pr-3 font-rubik text-xl font-bold text-neutral-950 shadow-[0_6px_24px_rgba(245,197,24,0.32)] transition-colors duration-300 hover:bg-[#e8b816]"
+              className="group inline-flex max-w-full items-center gap-2.5 rounded-full bg-[#F5C518] py-2.5 pl-5 pr-2.5 font-rubik text-base font-bold text-neutral-950 shadow-[0_6px_24px_rgba(245,197,24,0.32)] transition-colors duration-300 hover:bg-[#e8b816] sm:gap-3 sm:py-3 sm:pl-7 sm:pr-3 sm:text-xl"
             >
-              <span className="whitespace-nowrap">{content.hero.cta}</span>
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-neutral-950 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+              <span className="text-left leading-tight sm:whitespace-nowrap">{content.hero.cta}</span>
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-neutral-950 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:h-9 sm:w-9">
                 <ArrowUpRightIcon className="text-neutral-950" />
               </span>
             </HoverScale>
 
             <MountReveal delay={0.6}>
-              <div className="mt-8 flex flex-col items-center gap-2.5 md:mt-9">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.08] text-white/75">
+              <div className="mt-5 flex flex-col items-center gap-2 sm:mt-6 md:mt-9 md:gap-2.5">
+                <div className="flex h-8 w-8 items-center justify-center rounded-xl border border-white/10 bg-white/[0.08] text-white/75 sm:h-9 sm:w-9">
                   <SearchIcon className="h-4 w-4" />
                 </div>
-                <p className="mx-auto w-fit max-w-full px-2 text-center font-rubik text-[15px] font-normal leading-[1.012] text-white md:text-xl">
-                  <span className="block whitespace-nowrap">{content.hero.supportLine1}</span>
-                  <span className="block whitespace-nowrap">{content.hero.supportLine2}</span>
+                <p className="max-w-[318px] px-1 text-center font-rubik text-[14px] font-normal leading-[1.25] text-white sm:max-w-full sm:text-[15px] sm:leading-[1.012] md:text-xl">
+                  <span className="md:block md:whitespace-nowrap">{content.hero.supportLine1}</span>{" "}
+                  <span className="md:block md:whitespace-nowrap">{content.hero.supportLine2}</span>
                 </p>
               </div>
             </MountReveal>

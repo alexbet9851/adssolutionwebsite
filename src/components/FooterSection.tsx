@@ -134,7 +134,7 @@ export default function FooterSection({ content }: { content: SiteContent }) {
 
             <div className="flex w-full flex-col items-end justify-center gap-2.5 lg:w-auto lg:min-w-[250px] lg:gap-2">
               <div className="flex items-center gap-2">
-                <ContactIconButton href="tel:+380683705047" label={footer.phoneLabel}>
+                <ContactIconButton href="tel:+380774517570" label={footer.phoneLabel}>
                   <PhoneIcon />
                 </ContactIconButton>
                 <ContactIconButton href="https://api.whatsapp.com/send?phone=380959202126" label="WhatsApp">

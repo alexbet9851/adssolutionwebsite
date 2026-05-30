@@ -101,7 +101,7 @@ export const ruContent: SiteContent = {
       "GOOGLE ADS: ОТ СТРАТЕГИИ ДО ПРИБЫЛИ",
     ],
     headlineClassName:
-      "my-6 max-w-[900px] font-stratos text-[32px] font-medium uppercase leading-[1.012] text-white sm:my-7 md:my-8 md:text-[56px] md:[&>span]:whitespace-nowrap",
+      "my-5 flex w-full max-w-[calc(100vw-2.5rem)] flex-col items-center font-stratos text-[32px] font-medium uppercase leading-[1.012] text-white [&>span]:whitespace-nowrap sm:my-6 sm:max-w-[900px] md:my-8 md:text-[56px]",
     cta: "Бесплатный экспресс-аудит",
     supportLine1:
       "Найду ошибки, которые сливают ваш бюджет прямо сейчас,",

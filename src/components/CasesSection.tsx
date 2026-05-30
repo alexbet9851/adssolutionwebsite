@@ -100,13 +100,16 @@ export default function CasesSection({ content }: { content: SiteContent }) {
                     {caseItem.niche}
                   </p>
 
-                  <div className="grid grid-cols-2 gap-x-8 gap-y-5 lg:grid-cols-4">
+                  <div className="grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-5 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-5">
                     {caseItem.metrics.map((metric, i) => (
-                      <div key={i} className="relative flex flex-col items-center lg:items-start">
-                        <div className="font-stratos text-[26px] font-medium leading-none text-[#FFCC00] md:text-[30px]">
-                          {metric.value}
+                      <div
+                        key={i}
+                        className="relative flex min-w-0 flex-col items-start text-left"
+                      >
+                        <div className="flex min-h-[2.75rem] items-end font-stratos text-[20px] font-medium leading-none text-[#FFCC00] sm:min-h-[3rem] sm:text-[24px] md:text-[30px]">
+                          <span className="break-words sm:whitespace-nowrap">{metric.value}</span>
                         </div>
-                        <div className="mt-1.5 text-center font-rubik text-sm leading-[1.15] text-white md:text-[15px] lg:text-left">
+                        <div className="mt-1.5 font-rubik text-[13px] leading-[1.2] text-white sm:text-sm md:text-[15px]">
                           {metric.label}
                         </div>
                         {i < 3 && (

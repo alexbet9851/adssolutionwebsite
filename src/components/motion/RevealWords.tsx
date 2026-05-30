@@ -27,9 +27,8 @@ export function RevealWords({
     return (
       <Tag className={className} id={id}>
         {lines.map((line, lineIndex) => (
-          <span key={lineIndex}>
+          <span key={lineIndex} className="mx-auto block w-fit max-w-full">
             {line}
-            {lineIndex < lines.length - 1 ? <br /> : null}
           </span>
         ))}
       </Tag>
@@ -39,8 +38,8 @@ export function RevealWords({
   return (
     <Tag className={className} id={id}>
       {lines.map((line, lineIndex) => (
-        <span key={lineIndex} className="block">
-          {line.split(" ").map((word) => {
+        <span key={lineIndex} className="mx-auto block w-fit max-w-full">
+          {line.split(" ").map((word, wi, words) => {
             const index = wordIndex++;
             const delay = startDelay + index * 0.05;
             const motionProps = onMount
@@ -59,13 +58,12 @@ export function RevealWords({
                 key={`${lineIndex}-${index}`}
                 {...motionProps}
                 transition={{ ...springSoft, delay }}
-                className="mr-[0.28em] inline-block"
+                className={`inline-block ${wi < words.length - 1 ? "mr-[0.28em]" : ""}`}
               >
                 {word}
               </motion.span>
             );
           })}
-          {lineIndex < lines.length - 1 ? <br /> : null}
         </span>
       ))}
     </Tag>
