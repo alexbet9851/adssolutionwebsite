@@ -67,17 +67,17 @@ export default function ContactFormSection({ content }: { content: SiteContent }
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-[720px] px-5 text-center md:px-10">
+      <div className="relative mx-auto w-full max-w-[720px] px-3 text-center sm:px-5 md:px-10">
         <RevealWords
           as="h2"
           id="contact-form-heading"
           lines={[...contact.headingLines]}
           startDelay={0.2}
-          className="font-stratos text-[32px] font-medium uppercase leading-[1.012] text-white sm:text-[36px] lg:text-[40px]"
+          className="w-full text-center font-stratos text-[30px] font-medium uppercase leading-[1.05] text-white sm:text-[36px] sm:leading-[1.012] lg:text-[40px]"
         />
 
         <Reveal delay={0.4}>
-          <p className="mx-auto mt-6 max-w-[620px] font-rubik text-base font-normal leading-[1.35] text-white md:mt-8 md:text-xl">
+          <p className="mx-auto mt-6 max-w-[340px] px-1 font-rubik text-base font-normal leading-[1.35] text-white sm:max-w-[620px] sm:px-0 md:mt-8 md:text-xl">
             {contact.subtitleLine1}
             <br />
             {contact.subtitleLine2}

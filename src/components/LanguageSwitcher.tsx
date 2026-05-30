@@ -7,6 +7,8 @@ type LanguageSwitcherProps = {
   current: string;
   alternatives: Array<{ label: string; href: string }>;
   ariaLabel: string;
+  dropUp?: boolean;
+  align?: "start" | "end";
 };
 
 function ChevronDownIcon({ className }: { className?: string }) {
@@ -34,6 +36,8 @@ export function LanguageSwitcher({
   current,
   alternatives,
   ariaLabel,
+  dropUp = false,
+  align = "end",
 }: LanguageSwitcherProps) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -77,7 +81,13 @@ export function LanguageSwitcher({
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-[calc(100%+0.5rem)] z-40 min-w-[88px] overflow-hidden rounded-xl border border-black/5 bg-white py-1 shadow-xl"
+          className={`absolute z-50 min-w-[88px] overflow-hidden rounded-xl border border-black/5 bg-white py-1 shadow-xl ${
+            dropUp
+              ? "bottom-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2"
+              : align === "start"
+                ? "left-0 top-[calc(100%+0.5rem)]"
+                : "right-0 top-[calc(100%+0.5rem)]"
+          }`}
         >
           {alternatives.map((item) => (
             <li key={item.href} role="option" aria-selected={false}>

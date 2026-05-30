@@ -388,7 +388,7 @@ export const enContent: SiteContent = {
     ],
   },
   contact: {
-    headingLines: ["READY TO GROW YOUR PROFITS", "WITH GOOGLE ADS?"],
+    headingLines: ["READY TO GROW", "YOUR PROFITS WITH", "GOOGLE ADS?"],
     subtitleLine1: "Request a free express audit.",
     subtitleLine2: "I'll analyze your project and propose a scaling strategy.",
     nameLabel: "Your name",

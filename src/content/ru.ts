@@ -398,7 +398,7 @@ export const ruContent: SiteContent = {
     ],
   },
   contact: {
-    headingLines: ["ГОТОВЫ К РОСТУ ПРИБЫЛИ", "ЧЕРЕЗ GOOGLE ADS?"],
+    headingLines: ["ГОТОВЫ К РОСТУ", "ПРИБЫЛИ ЧЕРЕЗ", "GOOGLE ADS?"],
     subtitleLine1: "Оставьте заявку на бесплатный экспресс-аудит.",
     subtitleLine2:
       "Я проанализирую ваш проект и предложу стратегию масштабирования.",

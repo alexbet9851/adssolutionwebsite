@@ -384,7 +384,11 @@ export const ukContent: SiteContent = {
     ],
   },
   contact: {
-    headingLines: ["ГОТОВІ ДО ЗРОСТАННЯ ПРИБУТКУ", "ЧЕРЕЗ GOOGLE ADS?"],
+    headingLines: [
+      "ГОТОВІ ДО ЗРОСТАННЯ",
+      "ПРИБУТКУ ЧЕРЕЗ",
+      "GOOGLE ADS?",
+    ],
     subtitleLine1: "Залиште заявку на безкоштовний експрес-аудит.",
     subtitleLine2: "Я проаналізую ваш проєкт і запропоную стратегію масштабування.",
     nameLabel: "Ваше ім'я",

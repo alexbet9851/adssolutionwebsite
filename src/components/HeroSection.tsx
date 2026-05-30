@@ -221,19 +221,22 @@ export default function HeroSection({ content }: { content: SiteContent }) {
           {/* Mobile / tablet nav */}
           <div
             id="mobile-nav"
-            className={`overflow-hidden transition-all duration-300 ease-out lg:hidden ${
-              menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            className={`transition-all duration-300 ease-out lg:hidden ${
+              menuOpen
+                ? "max-h-80 overflow-visible opacity-100"
+                : "max-h-0 overflow-hidden opacity-0"
             }`}
           >
-            <div className="mt-4 rounded-2xl border border-white/15 bg-white/90 p-3 shadow-xl backdrop-blur-md">
-              <NavPill items={content.nav.items} ariaLabel={content.nav.ariaLabel} />
-              <div className="mt-3 flex justify-center sm:hidden">
+            <div className="mt-4 overflow-visible rounded-2xl border border-white/15 bg-white/90 p-3 shadow-xl backdrop-blur-md">
+              <div className="relative z-30 mb-2 flex justify-start sm:hidden">
                 <LanguageSwitcher
                   current={content.language.current}
                   alternatives={content.language.alternatives}
                   ariaLabel={content.language.ariaLabel}
+                  align="start"
                 />
               </div>
+              <NavPill items={content.nav.items} ariaLabel={content.nav.ariaLabel} />
             </div>
           </div>
         </header>

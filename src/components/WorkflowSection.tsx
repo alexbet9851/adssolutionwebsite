@@ -99,14 +99,14 @@ export function WorkflowSection({ content }: { content: SiteContent }) {
           ))}
         </div>
 
-        <Reveal delay={0.2}>
+        <Reveal delay={0.2} className="mt-10 flex justify-center md:mt-12">
           <HoverScale
             as="a"
             href="#contact"
-            className="group mt-10 inline-flex items-center gap-3 rounded-full bg-[#FFCC00] py-3 pl-7 pr-3 font-rubik text-xl font-bold text-neutral-950 shadow-[0_6px_24px_rgba(255,204,0,0.32)] transition-colors duration-300 hover:bg-[#e8b816] md:mt-12"
+            className="group inline-flex max-w-full items-center gap-2.5 rounded-full bg-[#FFCC00] py-2.5 pl-5 pr-2.5 font-rubik text-base font-bold text-neutral-950 shadow-[0_6px_24px_rgba(255,204,0,0.32)] transition-colors duration-300 hover:bg-[#e8b816] sm:gap-3 sm:py-3 sm:pl-7 sm:pr-3 sm:text-xl"
           >
-            <span className="whitespace-nowrap">{workflow.cta}</span>
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-neutral-950 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+            <span className="text-center leading-tight sm:whitespace-nowrap">{workflow.cta}</span>
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-neutral-950 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:h-9 sm:w-9">
               <ArrowUpRightIcon />
             </span>
           </HoverScale>
