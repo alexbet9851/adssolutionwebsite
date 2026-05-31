@@ -5,6 +5,7 @@ const NAV_ITEMS = [
   { label: "Підхід", href: "#approach" },
   { label: "Етапи", href: "#steps" },
   { label: "Кейси", href: "#cases" },
+  { label: "ДО / ПІСЛЯ", href: "#cases-optimization" },
 ] as const;
 
 const FOOTER_NAV_LINKS = NAV_ITEMS;

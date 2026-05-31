@@ -5,6 +5,7 @@ const NAV_ITEMS = [
   { label: "Подход", href: "#approach" },
   { label: "Этапы", href: "#steps" },
   { label: "Кейсы", href: "#cases" },
+  { label: "ДО / ПОСЛЕ", href: "#cases-optimization" },
 ] as const;
 
 const FOOTER_NAV_LINKS = NAV_ITEMS;
