@@ -9,13 +9,15 @@ import type { SiteContent } from "@/types/site-content";
 
 type FormState = {
   name: string;
-  contact: string;
+  phone: string;
+  messenger: string;
   website: string;
 };
 
 const INITIAL_FORM: FormState = {
   name: "",
-  contact: "",
+  phone: "",
+  messenger: "",
   website: "",
 };
 
@@ -37,8 +39,8 @@ export default function ContactFormSection({ content }: { content: SiteContent }
     setError("");
     setSubmitted(false);
 
-    if (!form.contact.trim()) {
-      setError(contact.errorRequiredContact);
+    if (!form.phone.trim()) {
+      setError(contact.errorRequiredPhone);
       return;
     }
 
@@ -46,7 +48,8 @@ export default function ContactFormSection({ content }: { content: SiteContent }
 
     const ok = await submitLeadForm({
       name: form.name.trim(),
-      phone: form.contact.trim(),
+      phone: form.phone.trim(),
+      messenger: form.messenger.trim(),
       comment: form.website.trim(),
     });
 
@@ -125,18 +128,34 @@ export default function ContactFormSection({ content }: { content: SiteContent }
           />
 
           <label className="sr-only" htmlFor="contact-phone">
-            {contact.contactLabel}
+            {contact.phoneLabel}
           </label>
           <input
             id="contact-phone"
-            type="text"
-            name="contact"
+            type="tel"
+            name="phone"
             autoComplete="tel"
             required
-            placeholder={contact.contactPlaceholder}
-            value={form.contact}
+            placeholder={contact.phonePlaceholder}
+            value={form.phone}
             onChange={(event) =>
-              setForm((prev) => ({ ...prev, contact: event.target.value }))
+              setForm((prev) => ({ ...prev, phone: event.target.value }))
+            }
+            className={INPUT_CLASS}
+          />
+
+          <label className="sr-only" htmlFor="contact-messenger">
+            {contact.messengerLabel}
+          </label>
+          <input
+            id="contact-messenger"
+            type="text"
+            name="messenger"
+            autoComplete="off"
+            placeholder={contact.messengerPlaceholder}
+            value={form.messenger}
+            onChange={(event) =>
+              setForm((prev) => ({ ...prev, messenger: event.target.value }))
             }
             className={INPUT_CLASS}
           />

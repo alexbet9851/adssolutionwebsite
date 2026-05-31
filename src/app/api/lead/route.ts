@@ -3,6 +3,7 @@ import { escapeHtml } from "@/lib/escapeHtml";
 type LeadPayload = {
   name?: string;
   phone?: string;
+  messenger?: string;
   comment?: string;
 };
 
@@ -25,6 +26,7 @@ export async function POST(request: Request) {
 
   const name = body.name?.trim() || "—";
   const phone = body.phone?.trim() || "";
+  const messenger = body.messenger?.trim() || "—";
   const comment = body.comment?.trim() || "—";
 
   if (!phone) {
@@ -35,7 +37,8 @@ export async function POST(request: Request) {
     "🔔 <b>Новая заявка с сайта!</b>\n\n" +
     `👤 Имя: ${escapeHtml(name)}\n` +
     `📞 Телефон: ${escapeHtml(phone)}\n` +
-    `💬 Комментарий: ${escapeHtml(comment)}`;
+    `💬 Мессенджер: ${escapeHtml(messenger)}\n` +
+    `🔗 Комментарий: ${escapeHtml(comment)}`;
 
   try {
     const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {

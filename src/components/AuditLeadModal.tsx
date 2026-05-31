@@ -9,13 +9,15 @@ import type { SiteContent } from "@/types/site-content";
 
 type FormState = {
   name: string;
-  contact: string;
+  phone: string;
+  messenger: string;
   website: string;
 };
 
 const INITIAL_FORM: FormState = {
   name: "",
-  contact: "",
+  phone: "",
+  messenger: "",
   website: "",
 };
 
@@ -69,8 +71,8 @@ export function AuditLeadModal({ open, onClose, content }: AuditLeadModalProps) 
     setError("");
     setSubmitted(false);
 
-    if (!form.contact.trim()) {
-      setError(content.errorRequiredContact);
+    if (!form.phone.trim()) {
+      setError(content.errorRequiredPhone);
       return;
     }
 
@@ -78,7 +80,8 @@ export function AuditLeadModal({ open, onClose, content }: AuditLeadModalProps) 
 
     const ok = await submitLeadForm({
       name: form.name.trim(),
-      phone: form.contact.trim(),
+      phone: form.phone.trim(),
+      messenger: form.messenger.trim(),
       comment: form.website.trim(),
     });
 
@@ -182,19 +185,35 @@ export function AuditLeadModal({ open, onClose, content }: AuditLeadModalProps) 
                 className={INPUT_CLASS}
               />
 
-              <label className="sr-only" htmlFor="audit-contact">
-                {content.contactLabel}
+              <label className="sr-only" htmlFor="audit-phone">
+                {content.phoneLabel}
               </label>
               <input
-                id="audit-contact"
-                type="text"
-                name="contact"
+                id="audit-phone"
+                type="tel"
+                name="phone"
                 autoComplete="tel"
                 required
-                placeholder={content.contactPlaceholder}
-                value={form.contact}
+                placeholder={content.phonePlaceholder}
+                value={form.phone}
                 onChange={(event) =>
-                  setForm((prev) => ({ ...prev, contact: event.target.value }))
+                  setForm((prev) => ({ ...prev, phone: event.target.value }))
+                }
+                className={INPUT_CLASS}
+              />
+
+              <label className="sr-only" htmlFor="audit-messenger">
+                {content.messengerLabel}
+              </label>
+              <input
+                id="audit-messenger"
+                type="text"
+                name="messenger"
+                autoComplete="off"
+                placeholder={content.messengerPlaceholder}
+                value={form.messenger}
+                onChange={(event) =>
+                  setForm((prev) => ({ ...prev, messenger: event.target.value }))
                 }
                 className={INPUT_CLASS}
               />

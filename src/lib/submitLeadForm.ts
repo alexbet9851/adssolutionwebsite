@@ -1,6 +1,7 @@
 type SubmitLeadFormInput = {
   name: string;
   phone: string;
+  messenger: string;
   comment: string;
 };
 
