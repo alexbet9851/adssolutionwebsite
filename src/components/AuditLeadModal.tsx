@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { springHero } from "@/lib/motion";
 import { pushFormSubmissionEvent } from "@/lib/pushFormSubmissionEvent";
+import { submitLeadForm } from "@/lib/submitLeadForm";
 import type { SiteContent } from "@/types/site-content";
 
 type FormState = {
@@ -34,6 +35,7 @@ export function AuditLeadModal({ open, onClose, content }: AuditLeadModalProps) 
   const [form, setForm] = useState<FormState>(INITIAL_FORM);
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     if (!open) return;
@@ -55,18 +57,35 @@ export function AuditLeadModal({ open, onClose, content }: AuditLeadModalProps) 
     if (!open) {
       setError("");
       setSubmitted(false);
+      setIsSubmitting(false);
       setForm(INITIAL_FORM);
     }
   }, [open]);
 
   const reduceMotion = useReducedMotion();
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError("");
+    setSubmitted(false);
 
     if (!form.contact.trim()) {
       setError(content.errorRequiredContact);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const ok = await submitLeadForm({
+      name: form.name.trim(),
+      phone: form.contact.trim(),
+      comment: form.website.trim(),
+    });
+
+    setIsSubmitting(false);
+
+    if (!ok) {
+      setError(content.errorSubmitFailed);
       return;
     }
 
@@ -209,7 +228,8 @@ export function AuditLeadModal({ open, onClose, content }: AuditLeadModalProps) 
 
               <button
                 type="submit"
-                className="mt-1 w-full rounded-full bg-neutral-950 px-6 py-3.5 font-rubik text-base font-medium text-white transition-colors hover:bg-neutral-800 md:py-4 md:text-lg"
+                disabled={isSubmitting}
+                className="mt-1 w-full rounded-full bg-neutral-950 px-6 py-3.5 font-rubik text-base font-medium text-white transition-colors hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-70 md:py-4 md:text-lg"
               >
                 {content.submit}
               </button>

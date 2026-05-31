@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import { Reveal } from "@/components/motion/Reveal";
 import { RevealWords } from "@/components/motion/RevealWords";
 import { pushFormSubmissionEvent } from "@/lib/pushFormSubmissionEvent";
+import { submitLeadForm } from "@/lib/submitLeadForm";
 import type { SiteContent } from "@/types/site-content";
 
 type FormState = {
@@ -29,13 +30,30 @@ export default function ContactFormSection({ content }: { content: SiteContent }
   const [form, setForm] = useState<FormState>(INITIAL_FORM);
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError("");
+    setSubmitted(false);
 
     if (!form.contact.trim()) {
       setError(contact.errorRequiredContact);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const ok = await submitLeadForm({
+      name: form.name.trim(),
+      phone: form.contact.trim(),
+      comment: form.website.trim(),
+    });
+
+    setIsSubmitting(false);
+
+    if (!ok) {
+      setError(contact.errorSubmitFailed);
       return;
     }
 
@@ -152,7 +170,8 @@ export default function ContactFormSection({ content }: { content: SiteContent }
 
           <button
             type="submit"
-            className="w-full rounded-full bg-[#FFCC00] px-6 py-4 font-rubik text-base font-medium text-neutral-950 transition-colors hover:bg-[#e6b800] md:py-[1.05rem] md:text-lg"
+            disabled={isSubmitting}
+            className="w-full rounded-full bg-[#FFCC00] px-6 py-4 font-rubik text-base font-medium text-neutral-950 transition-colors hover:bg-[#e6b800] disabled:cursor-not-allowed disabled:opacity-70 md:py-[1.05rem] md:text-lg"
           >
             {contact.submit}
           </button>

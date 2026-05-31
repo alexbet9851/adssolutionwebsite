@@ -142,6 +142,7 @@ export type SiteContent = {
     websitePlaceholder: string;
     submit: string;
     errorRequiredContact: string;
+    errorSubmitFailed: string;
     successMessage: string;
   };
   modal: {
@@ -155,6 +156,7 @@ export type SiteContent = {
     websitePlaceholder: string;
     submit: string;
     errorRequiredContact: string;
+    errorSubmitFailed: string;
     successMessage: string;
     closeOverlay: string;
     closeButton: string;

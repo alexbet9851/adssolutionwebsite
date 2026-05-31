@@ -412,7 +412,8 @@ export const ruContent: SiteContent = {
     submit: "Получить стратегию",
     errorRequiredContact:
       "Укажите Telegram или телефон — это обязательное поле.",
-    successMessage: "Заявка отправлена. Свяжусь с вами в ближайшее время.",
+    errorSubmitFailed: "Не удалось отправить заявку. Попробуйте ещё раз.",
+    successMessage: "Заявка успешно отправлена",
   },
   modal: {
     titleLines: ["ОСТАВЬТЕ ЗАЯВКУ НА", "БЕСПЛАТНЫЙ ЭКСПРЕСС-АУДИТ"],
@@ -426,7 +427,8 @@ export const ruContent: SiteContent = {
     submit: "Получить стратегию",
     errorRequiredContact:
       "Укажите Telegram или телефон — это обязательное поле.",
-    successMessage: "Заявка отправлена. Свяжусь с вами в ближайшее время.",
+    errorSubmitFailed: "Не удалось отправить заявку. Попробуйте ещё раз.",
+    successMessage: "Заявка успешно отправлена",
     closeOverlay: "Закрыть форму",
     closeButton: "Закрыть",
   },
