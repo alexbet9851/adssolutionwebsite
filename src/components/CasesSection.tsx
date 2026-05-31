@@ -87,7 +87,7 @@ export default function CasesSection({ content }: { content: SiteContent }) {
                         alt={caseItem.title}
                         fill
                         sizes="(max-width: 1024px) 100vw, 960px"
-                        className="object-cover object-bottom"
+                        className="object-cover object-right md:object-bottom"
                         priority={caseItem.id === 1}
                       />
                     </div>
