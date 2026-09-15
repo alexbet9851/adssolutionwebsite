@@ -127,7 +127,7 @@ export const enContent: SiteContent = {
         variant: "dark",
       },
       {
-        title: "$250,000+",
+        title: "$350,000+",
         subtitle: "Total managed budget",
         variant: "amber",
       },
@@ -252,8 +252,8 @@ export const enContent: SiteContent = {
         niche: "Niche: Sale of used iPhone, MacBook, and iPad",
         metrics: [
           { value: "2,500", label: "orders (conversions) received" },
-          { value: "262 UAH", label: "average cost per order (CPA)" },
-          { value: "650,000+ UAH", label: "total advertising budget of the project" },
+          { value: "$5.9", label: "average cost per order (CPA)" },
+          { value: "$14,610+", label: "total advertising budget of the project" },
           { value: "20 months", label: "period of stable management and scaling" },
         ],
       },
@@ -264,8 +264,8 @@ export const enContent: SiteContent = {
         niche: "Niche: Urgent buyout and apartment sales",
         metrics: [
           { value: "1,250+", label: "inquiries (leads) received" },
-          { value: "442 UAH", label: "average cost per lead in a highly competitive niche" },
-          { value: "550,000+ UAH", label: "total advertising budget of the project" },
+          { value: "$9.9", label: "average cost per lead in a highly competitive niche" },
+          { value: "$12,360+", label: "total advertising budget of the project" },
           { value: "16 months", label: "duration of continuous management and optimization" },
         ],
       },
@@ -276,9 +276,9 @@ export const enContent: SiteContent = {
         niche: "Niche: Body repair and car painting",
         metrics: [
           { value: "90", label: "target leads received" },
-          { value: "210 UAH", label: "average cost per lead (CPL)" },
+          { value: "$4.7", label: "average cost per lead (CPL)" },
           { value: "12%", label: "average CTR (ad click-through rate)" },
-          { value: "18,900 UAH", label: "total advertising budget" },
+          { value: "$425", label: "total advertising budget" },
         ],
       },
       {
@@ -288,9 +288,9 @@ export const enContent: SiteContent = {
         niche: "Niche: International freight (B2B)",
         metrics: [
           { value: "960+", label: "leads received" },
-          { value: "275 UAH", label: "cost per lead in a highly competitive B2B niche" },
+          { value: "$6.2", label: "cost per lead in a highly competitive B2B niche" },
           { value: "6.4%", label: "average website conversion rate" },
-          { value: "260,000+ UAH", label: "total advertising budget of the project" },
+          { value: "$5,840+", label: "total advertising budget of the project" },
         ],
       },
       {
@@ -302,9 +302,9 @@ export const enContent: SiteContent = {
         metrics: [
           { value: "1,100+", label: "confirmed orders received" },
           { value: "738%", label: "average ROAS across the account" },
-          { value: "171 UAH", label: "average cost per transaction" },
+          { value: "$3.8", label: "average cost per transaction" },
           {
-            value: "385,000+ UAH",
+            value: "$8,650+",
             label: "revenue generated from the advertising channel alone",
           },
         ],
@@ -330,7 +330,7 @@ export const enContent: SiteContent = {
         results: [
           {
             text: "Conversion cost reduced by 2x",
-            highlight: "625 UAH → 283 UAH",
+            highlight: "$14.05 → $6.36",
           },
         ],
       },
@@ -344,7 +344,7 @@ export const enContent: SiteContent = {
         results: [
           {
             text: "Conversion cost reduced",
-            highlight: "177.65 UAH → 138.32 UAH",
+            highlight: "$3.99 → $3.11",
           },
           {
             text: "Number of conversions increased",
@@ -361,7 +361,7 @@ export const enContent: SiteContent = {
         results: [
           {
             text: "Conversion cost reduced",
-            highlight: "158.19 UAH → 93.67 UAH",
+            highlight: "$3.55 → $2.11",
           },
           {
             text: "Number of conversions increased",
@@ -378,7 +378,7 @@ export const enContent: SiteContent = {
         results: [
           {
             text: "Conversion cost reduced",
-            highlight: "1,649 UAH → 872 UAH",
+            highlight: "$37 → $19.6",
           },
           {
             text: "Reduction",

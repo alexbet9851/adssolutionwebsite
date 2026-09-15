@@ -126,7 +126,7 @@ export const ukContent: SiteContent = {
         variant: "dark",
       },
       {
-        title: "$250,000+",
+        title: "$350,000+",
         subtitle: "Загальний керований бюджет",
         variant: "amber",
       },
