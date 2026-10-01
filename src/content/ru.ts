@@ -124,7 +124,7 @@ export const ruContent: SiteContent = {
         variant: "dark",
       },
       {
-        title: "UA / EU",
+        title: "UA / EU / США",
         subtitle: "работа с локальными и зарубежными проектами.",
         variant: "dark",
       },

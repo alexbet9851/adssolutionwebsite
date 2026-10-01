@@ -121,7 +121,7 @@ export const ukContent: SiteContent = {
         variant: "dark",
       },
       {
-        title: "UA / EU",
+        title: "UA / EU / США",
         subtitle: "робота з місцевими та закордонними проектами.",
         variant: "dark",
       },

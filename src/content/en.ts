@@ -122,7 +122,7 @@ export const enContent: SiteContent = {
         variant: "dark",
       },
       {
-        title: "UA / EU",
+        title: "UA / EU / USA",
         subtitle: "working on local and international projects.",
         variant: "dark",
       },
