@@ -1,26 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Manrope, Rubik } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-inter",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const manrope = Manrope({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-manrope",
-  weight: ["800"],
-});
-
-const rubik = Rubik({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-rubik",
-  weight: ["300", "400", "600", "700"],
-});
 
 const stratos = localFont({
   src: "../fonts/stratos/Stratos-LC-Web-Medium.woff2",
@@ -70,6 +51,16 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@800&family=Rubik:wght@300;400;600;700&display=swap"
+          rel="stylesheet"
+        />
         <Script
           id="google-tag-manager"
           strategy="beforeInteractive"
@@ -83,7 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body
-        className={`${inter.variable} ${manrope.variable} ${rubik.variable} ${stratos.variable} ${satoshi.variable} font-sans`}
+        className={`${stratos.variable} ${satoshi.variable} font-sans`}
       >
         <noscript>
           <iframe

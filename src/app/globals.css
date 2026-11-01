@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+:root {
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-manrope: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-rubik: "Rubik", ui-sans-serif, system-ui, sans-serif;
+}
+
 .font-satoshi {
   font-family: var(--font-satoshi), "Satoshi", system-ui, sans-serif;
 }
