@@ -124,12 +124,12 @@ export const ruContent: SiteContent = {
         variant: "dark",
       },
       {
-        title: "UA / EU / США",
+        title: "СНГ / EU / США",
         subtitle: "работа с локальными и зарубежными проектами.",
         variant: "dark",
       },
       {
-        title: "$350,000+",
+        title: "$500,000+",
         subtitle: "Суммарный управляемый бюджет",
         variant: "amber",
       },
