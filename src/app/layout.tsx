@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ukContent } from "@/content/uk";
 
 const stratos = localFont({
   src: "../fonts/stratos/Stratos-LC-Web-Medium.woff2",
@@ -38,9 +39,8 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ads Solutions — Google Ads",
-  description:
-    "Професійне управління рекламою з акцентом на окупність та зростання прибутку.",
+  title: ukContent.metadata.title,
+  description: ukContent.metadata.description,
 };
 
 export default function RootLayout({

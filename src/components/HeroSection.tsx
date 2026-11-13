@@ -271,7 +271,7 @@ export default function HeroSection({ content }: { content: SiteContent }) {
         <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center px-3 pb-6 pt-0 text-center sm:px-2 sm:pb-5 sm:pt-1">
           <div className="flex w-full max-w-[920px] flex-col items-center">
             <MountReveal variant="blur" delay={0.2}>
-              <p className="max-w-[340px] px-1 pb-3 font-rubik text-lg font-light leading-[1.15] text-white sm:max-w-[560px] sm:pb-2 sm:pt-1 sm:text-xl sm:leading-[1.012]">
+              <p className="max-w-[340px] px-1 pb-3 font-rubik text-lg font-semibold leading-[1.15] text-white sm:max-w-[560px] sm:pb-2 sm:pt-1 sm:text-xl sm:leading-[1.012]">
                 {content.hero.subtitleNormal}
                 <span className="font-semibold">{content.hero.subtitleBold}</span>
               </p>

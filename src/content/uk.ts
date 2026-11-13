@@ -76,9 +76,10 @@ export const ukContent: SiteContent = {
   htmlLang: "uk",
   homePath: "/",
   metadata: {
-    title: "Ads Solutions — Google Ads",
+    title:
+      "Налаштування та ведення Google Ads (Гугл Реклама) і Google Shopping під ключ | AdsSolutions",
     description:
-      "Професійне управління рекламою з акцентом на окупність та зростання прибутку.",
+      "Професійне налаштування контекстної реклами Google Ads, Google Shopping та веб-аналітики (GA4, GTM). Запуск з нуля або аудит поточних кампаній.",
   },
   language: {
     current: "UA",
@@ -95,16 +96,19 @@ export const ukContent: SiteContent = {
     menuClose: "Закрити меню",
   },
   hero: {
-    subtitleNormal: "Професійне управління рекламою з акцентом на ",
-    subtitleBold: "окупність та зростання прибутку.",
+    subtitleNormal: "Контекстна реклама, Google Shopping та веб-аналітика під ключ.",
+    subtitleBold: "",
     headlineLines: [
-      "МАСШТАБУЮ БІЗНЕС ЗА",
-      "ДОПОМОГОЮ GOOGLE ADS:",
-      "ВІД СТРАТЕГІЇ ДО ПРИБУТКУ",
+      "НАЛАШТУВАННЯ ТА",
+      "ВЕДЕННЯ ГУГЛ РЕКЛАМИ",
+      "ДЛЯ РОСТУ ПРОДАЖІВ",
+      "І ЗАЯВОК",
     ],
-    cta: "Безкоштовний експрес-аудит",
-    supportLine1: "Я знайду помилки, які зараз розтрачують ваш бюджет,",
-    supportLine2: "і надам конкретний план їх виправлення.",
+    headlineClassName:
+      "my-5 w-full text-center font-stratos text-[28px] font-medium uppercase leading-[1.05] text-white sm:my-6 sm:text-[32px] sm:leading-[1.012] md:my-8 md:text-[56px]",
+    cta: "Безкоштовна консультація",
+    supportLine1: "Запущу Пошук та Google Shopping з нуля, або проведу аудит",
+    supportLine2: "поточних кампаній, щоб прибрати злив бюджету.",
   },
   results: {
     srHeading: "Про мене",
